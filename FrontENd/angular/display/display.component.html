@@ -1,0 +1,25 @@
+<p>display works!</p>
+<table class="table table-hover">
+        <thead>
+        <tr>
+            <td>EmpID</td>
+            <td>EName</td>
+            <td>Email</td>
+            <td>Phone</td>
+           
+            
+        </tr>
+        </thead>
+      
+        <tbody>
+                <tr *ngFor="let empl of employees">
+                        <td>{{ empl.empId }}</td>
+                        <td>{{ empl.ename }}</td>
+                       
+                        <td>{{ empl.email }}</td>
+                        <td>{{ empl.phone }}</td>
+
+                        <td><button routerLink="/update/{{empl.empId}}">Edit</button></td>
+                        <td><button (click)="deleteEmp(empl.empId)">Delete</button></td>
+                </tr>
+        </tbody>
